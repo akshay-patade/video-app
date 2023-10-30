@@ -1,0 +1,26 @@
+<nav class = "bg-slate-800">
+    <div class = "flex justify-between items-center p-4">
+
+        <div class = "flex items-center space-x-4">
+            <img src = "../../assets/slack_logo.png" class = "rounded-full h-12 w-12" alt = "slack_logo" />
+            <h1 class = "text-white text-2xl  my-2 hover:bg-gray-500 rounded-md hover:cursor-pointer">VideoPal</h1>
+        </div>
+
+        <div class = "sm:hidden">
+            <img [src] = "mobileOptions?'../../assets/cross-icon.png':'../../assets/burger-logo.png' " (click) = "showMobileOptions()" class = "h-12 w-12"/>
+        </div>
+
+        <div class = "space-x-4 hidden sm:flex">
+            <button class = "rounded-md text-white   text-2xl hover:bg-gray-500">Login</button>
+            <button class = "rounded-md text-white  text-2xl hover:bg-gray-500">Signup</button>
+        </div>
+    </div>
+
+    <div  class = "sm:hidden bg-slate-800 space-y-3 px-5 pt-2 p-3"  id = "moblile-menu">
+
+        <a href = "#" class = "rounded-md text-white text-2xl w-full  hover:bg-gray-500 block">Login</a>
+        <a href = "#" class = "rounded-md text-white text-2xl w-full  hover:bg-gray-500 block">Signup</a>
+    </div>
+</nav>
+
+
