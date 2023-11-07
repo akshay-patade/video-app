@@ -1,0 +1,62 @@
+<footer class = "bg-neutral-800 py-6">
+    <div class = "grid md:grid-cols-4 text-center">
+
+        <div class = "text-white flex flex-col space-y-4">
+
+            <div class = "flex justify-center space-x-4">
+                <h3>Why VideoPal</h3>
+                <img [src] = "whyVideoPalOptions?'../../assets/down-arrow.png' :'../../assets/greater-than.png' " (click) = "showWhyVideoPalOptions()"  class = "h-6 sm:hidden" />
+            </div>
+
+            <div class = "hidden md:flex md:flex-col md:space-y-4">
+                <a href = "#" class = "hover:underline">Product</a>
+                <a href = "#" class = "hover:underline" >Download</a>
+                <a href = "#" class = "hover:underline">Status</a>
+                <a href = "#" class = "hover:underline">Directory</a>
+            </div>
+
+
+            <!-- This one is for the mobile options-->
+            <div [ngClass] = "{'hidden': !whyVideoPalOptions}" class = "flex flex-col space-y-4">
+                <a href = "#" class = "hover:underline">Product</a>
+                <a href = "#" class = "hover:underline" >Download</a>
+                <a href = "#" class = "hover:underline">Status</a>
+                <a href = "#" class = "hover:underline">Directory</a>
+            </div>
+   
+        </div>
+
+        <!-- <div class = "text-white flex flex-col space-y-4">
+            
+            <a href = "#">Company</a>
+            <a href = "#" class = "hover:underline" >About</a>
+            <a href = "#" class = "hover:underline">Jobs</a>
+            <a href = "#" class = "hover:underline">Brands</a>
+            <a href = "#" class = "hover:underline">NewsRoom</a>
+            <a href = "#" class = "hover:underline">Fall Release</a>
+        </div>
+
+        <div class = "text-white flex flex-col space-y-4">
+            <a href = "#">Resources</a>
+            <a href = "#" class = "hover:underline" >College</a>
+            <a href = "#" class = "hover:underline">Support</a>
+            <a href = "#" class = "hover:underline">Safety</a>
+            <a href = "#" class = "hover:underline">Blog</a>
+            <a href = "#" class = "hover:underline">Feedback</a>
+            <a href = "#" class = "hover:underline">Developers</a>
+        </div>
+
+        <div class = "text-white flex flex-col space-y-4">
+            <a href = "#">Terms and conditions</a>
+            <a href = "#" class = "hover:underline">Policies</a>
+            <a href = "#" class = "hover:underline" >Terms</a>
+            <a href = "#" class = "hover:underline">Privacy</a>
+            <a href = "#" class = "hover:underline">Cookies Settings</a>
+            <a href = "#" class = "hover:underline">Guideliness</a>
+            <a href = "#" class = "hover:underline">Acknowledgements</a>
+        </div> -->
+
+
+    </div>
+
+</footer>
