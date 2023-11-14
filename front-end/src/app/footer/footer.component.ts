@@ -8,10 +8,28 @@ import { Component } from '@angular/core';
 export class FooterComponent {
 
   whyVideoPalOptions: boolean = false;
+  companyOptions: boolean = false;
+  resourcesOptions: boolean = false;
+  policiesOptions: boolean = false;
 
   showWhyVideoPalOptions() {
 
     this.whyVideoPalOptions = !this.whyVideoPalOptions;
+  }
+
+  showCompanyOptions() {
+
+    this.companyOptions = !this.companyOptions;
+  }
+
+  showResourcesOptions(){
+
+    this.resourcesOptions = !this.resourcesOptions;
+  }
+
+  showPoilciesOptions() {
+
+    this.policiesOptions = !this.policiesOptions;
   }
 
 }
