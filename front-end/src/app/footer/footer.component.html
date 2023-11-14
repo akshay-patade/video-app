@@ -97,12 +97,11 @@
         <div class = "text-white flex flex-col space-y-4">
 
             <div class = "flex justify-between space-x-4 sm:justify-center">
-                <h3>Resources</h3>
+                <h3>Policies</h3>
                 <img [src] = "policiesOptions?'../../assets/down-arrow.png' :'../../assets/greater-than.png' " (click) = "showPoilciesOptions()"  class = "h-6 sm:hidden" />
             </div>
 
             <div class = "hidden sm:flex sm:flex-col sm:space-y-4 text-center">
-                <a href = "#" class = "hover:underline" >Policies</a>
                 <a href = "#" class = "hover:underline">Terms</a>
                 <a href = "#" class = "hover:underline">Privacy</a>
                 <a href = "#" class = "hover:underline">Cookies Settingsog</a>
@@ -113,12 +112,11 @@
             <!-- This one is for the mobile options-->
 
             <div [ngClass] = "{'hidden': !policiesOptions}" class = "sm:hidden flex flex-col space-y-6">
-                <a href = "#" class = "hover:underline">College</a>
-                <a href = "#" class = "hover:underline" >Support</a>
-                <a href = "#" class = "hover:underline">Safety</a>
-                <a href = "#" class = "hover:underline">Blog</a>
-                <a href = "#" class = "hover:underline">Feedback</a>
-                <a href = "#" class = "hover:underline">Developers</a>
+                <a href = "#" class = "hover:underline">Terms</a>
+                <a href = "#" class = "hover:underline">Privacy</a>
+                <a href = "#" class = "hover:underline">Cookies Settingsog</a>
+                <a href = "#" class = "hover:underline">Guideliness</a>
+                <a href = "#" class = "hover:underline">Acknowledgements</a>
             </div>
         </div>
 
