@@ -1,6 +1,44 @@
-<div>
 
-    <img src = "../../assets/slack_logo.png" >
+<div class = "flex flex-col  items-center space-y-4 bg-orange-300 min-h-screen pt-7">
+
+    <div class = "flex justify-start items-center space-x-5">
+        <img src = "../../assets/slack_logo.png" class = "h-12 w-12" />
+        <h1 class = "text-xl hover:cursor-pointer"><a routerLink = "">VideoPal</a></h1>
+    </div>
+
+    <form [formGroup] = "userEmail" class = "flex flex-col  items-center space-y-4 min-h-screen w-1/2" (ngSubmit)="onSubmit()" >
+        <h1 class = "text-2xl mt-5">First, enter your email</h1>
+
+        <input [ngClass] = "{'border-red-700 border-4': userEmail.get('emailId')?.invalid && userEmail.get('emailId')?.dirty || userEmail.get('emailId')?.touched}"type = "email" name = "email-id" id = "email-id" placeholder="Enter your email Id" class = "w-1/2 border  h-12" formControlName = "emailId" />    
+    
+        <div *ngIf="userEmail.get('emailId')?.invalid && userEmail.get('emailId')?.dirty || userEmail.get('emailId')?.touched">
+
+            <div *ngIf = "userEmail.get('emailId')?.errors?.['required']" [ngClass] = "{'text-red-700': userEmail.get('emailId')?.errors?.['required']}">Please enter the email Id</div>
+            <div *ngIf = "userEmail.get('emailId')?.errors?.['pattern']" [ngClass] = "{'text-red-700': userEmail.get('emailId')?.errors?.['pattern']}">Please enter valid email address</div>
+
+        </div>
+
+        <button type = "submit" class ="w-1/2 border bg-gray-300 hover:bg-gray-600  h-12" [disabled] = "userEmail.invalid"> Login</button>
+        <h3>OR</h3>
+
+        <!-- Sign in with google option-->
+        <button class ="w-1/2 border h-9">
+            <div class = "flex justify-center space-x-5 align-center">
+                <img src = "../../assets/google-icon.png " class = "w-6 h-6" />
+                <h3>Sign in with google</h3>
+            </div>
+        </button>
+
+        <!-- Sign in with apple option-->
+        <button class ="w-1/2 border h-9">
+            <div class = "flex justify-center space-x-5 align-center">
+                <img src = "../../assets/apple-icon.png " class = "w-6 h-6" />
+                <h3>Sign in with apple</h3>
+            </div>
+        </button>
+
+    </form>
+
 </div>
 
 
