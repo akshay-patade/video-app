@@ -12,7 +12,7 @@ import { VerifyCodeService } from './verify-code.service';
 })
 export class LoginComponent{
 
-  constructor(private Verification: VerifyCodeService){}
+  constructor(private verification: VerifyCodeService){}
   userEmail = new FormGroup({
     emailId: new FormControl('',[
       Validators.required,
@@ -22,9 +22,9 @@ export class LoginComponent{
 
   onSubmit(): void{
     if(this.userEmail.valid) {
-
-
-  }
+      console.log("Form submiteed successfully");
+      this.verification.setVerificationCode();
+    }
+    
 }
-
 }

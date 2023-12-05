@@ -24,7 +24,6 @@ export class VerifyCodeService {
   }
 
   getVerificationCode(): string{
-
     return this.veriCode;
   }
 }
